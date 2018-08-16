@@ -143,23 +143,13 @@ def command_help(bot, update):
     bot.send_message(cid, help_text)
 
 def command_roll(bot, update):	
-	groupName = update.message.chat.title
 	cid = update.message.chat_id
-	groupType = update.message.chat.type
-	game = GamesController.games.get(cid, None)
-	
-	#if len(args) <= 0:
-		# if not args, use normal behaviour
-		# fname = update.message.from_user.first_name.replace("_", " ")
-		uid = update.message.from_user.id
-		bot.send_message(cid, "Probando")
-		die1 = [1,2,3,4,5,6]
-		die2 = ['Caballero', 'Arquero', 'Castillo', 'Comodin', 'Catapulta', 'Castillo']
-		resultado = (random.choice(die1), random.choice(die1), random.choice(die2), random.choice(die2))
-		bot.send_message(cid, resultado)
-		# random.choice(list(self.fate_options.keys()))
-	#else 
-	#	bot.send_message(cid, 'Este comando no debe llevar argumentos')
+	uid = update.message.from_user.id
+	bot.send_message(cid, "Probando")
+	die1 = [1,2,3,4,5,6]
+	die2 = ['Caballero', 'Arquero', 'Castillo', 'Comodin', 'Catapulta', 'Castillo']
+	resultado = (random.choice(die1), random.choice(die1), random.choice(die2), random.choice(die2))
+	bot.send_message(cid, resultado)
 
 def command_newgame(bot, update):  
 	cid = update.message.chat_id
