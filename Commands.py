@@ -66,15 +66,17 @@ symbols = [
     u"\u2620" + ' Fascistas ganan'  # skull
 ]
 
-def command_roll(bot, update):	
+def command_roll(bot, update, args):	
 	cid = update.message.chat_id
 	uid = update.message.from_user.id
 	die1 = [1,2,3,4,5,6]
 	die2 = ['Caballero', 'Arquero', 'Castillo', 'Comodin', 'Catapulta', 'Castillo']
-	resultado1 = (random.choice(die1), random.choice(die1))
-	resultado2 = (random.choice(die2), random.choice(die2))
-	bot.send_message(cid, resultado1)
-	bot.send_message(cid, resultado2)
+	for j in 1:args[0]
+		resultado1[j] = random.choice(die1)
+	for j in 1:args[1]	
+		resultado2[j] = random.choice(die2)
+	bot.send_message(cid, resultado1[:])
+	bot.send_message(cid, resultado2[:])
 		      
 def command_symbols(bot, update):
     cid = update.message.chat_id
