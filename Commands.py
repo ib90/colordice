@@ -71,9 +71,9 @@ def command_roll(bot, update, args):
 	uid = update.message.from_user.id
 	die1 = [1,2,3,4,5,6]
 	die2 = ['Caballero', 'Arquero', 'Castillo', 'Comodin', 'Catapulta', 'Castillo']
-	for j in range(args[0]):
+	for j in range(int(args[0])):
 		resultado1[j] = random.choice(die1)
-	for j in range(args[1]):
+	for j in range(int(args[1])):
 		resultado2[j] = random.choice(die2)
 	bot.send_message(cid, resultado1[:])
 	bot.send_message(cid, resultado2[:])
