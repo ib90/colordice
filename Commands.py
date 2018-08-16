@@ -583,7 +583,7 @@ def command_jugadores(bot, update):
 					
 	bot.send_message(game.cid, jugadoresActuales, ParseMode.MARKDOWN)	
 
-def command_roll	
+def command_roll(bot, update, args)	
 	groupName = update.message.chat.title
 	cid = update.message.chat_id
 	groupType = update.message.chat.type
