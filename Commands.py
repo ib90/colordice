@@ -153,7 +153,8 @@ def command_roll(bot, update, args):
 		fname = update.message.from_user.first_name.replace("_", " ")
 		uid = update.message.from_user.id
 		bot.send_message(cid, "Probando")
-		random.choice([1:6])
+		die1 = random.choice([1:6])
+		bot.send_message(cid, die1)
 		# random.choice(list(self.fate_options.keys()))
 	else:
 		uid = update.message.from_user.id
