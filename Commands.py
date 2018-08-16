@@ -66,6 +66,16 @@ symbols = [
     u"\u2620" + ' Fascistas ganan'  # skull
 ]
 
+def command_roll(bot, update):	
+	cid = update.message.chat_id
+	uid = update.message.from_user.id
+	die1 = [1,2,3,4,5,6]
+	die2 = ['Caballero', 'Arquero', 'Castillo', 'Comodin', 'Catapulta', 'Castillo']
+	resultado1 = (random.choice(die1), random.choice(die1))
+	resultado2 = (random.choice(die2), random.choice(die2))
+	bot.send_message(cid, resultado1)
+	bot.send_message(cid, resultado2)
+		      
 def command_symbols(bot, update):
     cid = update.message.chat_id
     symbol_text = "Los siguientes símbolos aparecen en el tablero: \n"
@@ -141,16 +151,6 @@ def command_help(bot, update):
     for i in commands:
         help_text += i + "\n"
     bot.send_message(cid, help_text)
-
-def command_roll(bot, update):	
-	cid = update.message.chat_id
-	uid = update.message.from_user.id
-	die1 = [1,2,3,4,5,6]
-	die2 = ['Caballero', 'Arquero', 'Castillo', 'Comodin', 'Catapulta', 'Castillo']
-	resultado1 = (random.choice(die1), random.choice(die1)
-	resultado2 = (random.choice(die2), random.choice(die2)
-	bot.send_message(cid, resultado1)
-	bot.send_message(cid, resultado2)
 
 def command_newgame(bot, update):  
 	cid = update.message.chat_id
