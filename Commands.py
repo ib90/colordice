@@ -71,6 +71,8 @@ def command_roll(bot, update, args):
 	uid = update.message.from_user.id
 	die1 = [1,2,3,4,5,6]
 	die2 = ['Caballero', 'Arquero', 'Castillo', 'Comodin', 'Catapulta', 'Castillo']
+	if len(args) <= 0:
+		args = [2,2]		
 	resultado1=''
 	resultado2=''
 	for j in range(int(args[0])):
