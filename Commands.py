@@ -142,13 +142,13 @@ def command_help(bot, update):
         help_text += i + "\n"
     bot.send_message(cid, help_text)
 
-def command_roll(bot, update, args):	
+def command_roll(bot, update):	
 	groupName = update.message.chat.title
 	cid = update.message.chat_id
 	groupType = update.message.chat.type
 	game = GamesController.games.get(cid, None)
 	
-	if len(args) <= 0:
+	#if len(args) <= 0:
 		# if not args, use normal behaviour
 		fname = update.message.from_user.first_name.replace("_", " ")
 		uid = update.message.from_user.id
@@ -158,49 +158,8 @@ def command_roll(bot, update, args):
 		resultado = (random.choice(die1), random.choice(die1), random.choice(die2), random.choice(die2))
 		bot.send_message(cid, resultado)
 		# random.choice(list(self.fate_options.keys()))
-	else:
-		uid = update.message.from_user.id
-		if uid == ADMIN:
-			for i,k in zip(args[0::2], args[1::2]):
-				fname = i.replace("_", " ")
-				uid = int(k)
-				player = Player(fname, uid)
-				game.add_player(uid, player)
-				log.info("%s (%d) joined a game in %d" % (fname, uid, game.cid))
-	
-	if groupType not in ['group', 'supergroup']:
-		bot.send_message(cid, "Tienes que agregarme a un grupo primero y escribir /newgame allá!")
-	elif not game:
-		bot.send_message(cid, "No hay juego en este chat. Crea un nuevo juego con /newgame")
-	elif game.board:
-		bot.send_message(cid, "El juego ha comenzado. Por favor espera el proximo juego!")
-	elif uid in game.playerlist:
-		bot.send_message(game.cid, "Ya te has unido al juego, %s!" % fname)
-	elif len(game.playerlist) >= 10:
-		bot.send_message(game.cid, "Han llegado al maximo de jugadores. Por favor comiencen el juego con /startgame!")
-	else:
-		#uid = update.message.from_user.id
-		player = Player(fname, uid)
-		try:
-			#Commented to dont disturb player during testing uncomment in production
-			bot.send_message(uid, "Te has unido a un juego en %s. Pronto te dire cual es tu rol secreto." % groupName)			 
-			game.add_player(uid, player)
-			log.info("%s (%d) joined a game in %d" % (fname, uid, game.cid))
-			if len(game.playerlist) > 4:
-				bot.send_message(game.cid, fname + " se ha unido al juego. Escribe /startgame si este es el último jugador y quieren comenzar con %d jugadores!" % len(game.playerlist))
-			elif len(game.playerlist) == 1:
-				bot.send_message(game.cid, "%s se ha unido al juego. Hay %d jugador en el juego y se necesita 5-10 jugadores." % (fname, len(game.playerlist)))
-			else:
-				bot.send_message(game.cid, "%s se ha unido al juego. Hay %d jugadores en el juego y se necesita 5-10 jugadores" % (fname, len(game.playerlist)))
-			# Luego dicto los jugadores que se han unido
-			jugadoresActuales = "Los jugadores que se han unido al momento son:\n"
-			for uid in game.playerlist:
-				jugadoresActuales += "%s\n" % game.playerlist[uid].name
-			bot.send_message(game.cid, jugadoresActuales)
-			save_game(cid, "Game in join state", game)
-		except Exception:
-			bot.send_message(game.cid,
-				fname + ", No te puedo enviar un mensaje privado. Por favor, ve a @secrethitlertestlbot y has pincha \"Start\".\nLuego necesitas escribir /join de nuevo.")
+	#else 
+	#	bot.send_message(cid, 'Este comando no debe llevar argumentos')
 
 def command_newgame(bot, update):  
 	cid = update.message.chat_id
