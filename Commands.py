@@ -150,7 +150,7 @@ def command_roll(bot, update):
 	
 	#if len(args) <= 0:
 		# if not args, use normal behaviour
-		fname = update.message.from_user.first_name.replace("_", " ")
+		# fname = update.message.from_user.first_name.replace("_", " ")
 		uid = update.message.from_user.id
 		bot.send_message(cid, "Probando")
 		die1 = [1,2,3,4,5,6]
