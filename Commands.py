@@ -51,7 +51,7 @@ commands = [  # command description used in the "help" command
     '/board - Imprime el tablero actual con la pista liberal y la pista fascista, orden presidencial y contador de elección',
     '/history - Imprime el historial del juego actual',
     '/votes - Imprime quien ha votado',
-    '/calltovote - Avisa a los jugadores que se tiene que votar'  
+    '/calltovote - Avisa a los jugadores que se tiene que votar',
     '/roll - Tirar dado'		
 ]
 
@@ -142,6 +142,15 @@ def command_help(bot, update):
         help_text += i + "\n"
     bot.send_message(cid, help_text)
 
+def command_roll(bot, update, args):	
+	cid = update.message.chat_id
+	groupType = update.message.chat.type
+	game = GamesController.games.get(cid, None)
+	if len(args) <= 0:
+		bot.send_message(game.cid, 'Comando incompleto', ParseMode.MARKDOWN)	
+	else:
+		bot.send_message(game.cid, args, ParseMode.MARKDOWN)	
+		
 def command_newgame(bot, update):  
 	cid = update.message.chat_id
 		
@@ -582,13 +591,3 @@ def command_jugadores(bot, update):
 		jugadoresActuales += "[%s](tg://user?id=%d)\n" % (game.playerlist[uid].name, uid)
 					
 	bot.send_message(game.cid, jugadoresActuales, ParseMode.MARKDOWN)	
-
-def command_roll(bot, update, args):	
-	groupName = update.message.chat.title
-	cid = update.message.chat_id
-	groupType = update.message.chat.type
-	game = GamesController.games.get(cid, None)
-	if len(args) <= 0:
-		bot.send_message(game.cid, 'Comando incompleto', ParseMode.MARKDOWN)	
-	else:
-		bot.send_message(game.cid, args, ParseMode.MARKDOWN)	
