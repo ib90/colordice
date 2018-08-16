@@ -145,11 +145,12 @@ def command_help(bot, update):
 def command_roll(bot, update):	
 	cid = update.message.chat_id
 	uid = update.message.from_user.id
-	bot.send_message(cid, "Probando")
 	die1 = [1,2,3,4,5,6]
 	die2 = ['Caballero', 'Arquero', 'Castillo', 'Comodin', 'Catapulta', 'Castillo']
-	resultado = (random.choice(die1), random.choice(die1), random.choice(die2), random.choice(die2))
-	bot.send_message(cid, resultado)
+	resultado1 = (random.choice(die1), random.choice(die1)
+	resultado2 = (random.choice(die2), random.choice(die2)
+	bot.send_message(cid, resultado1)
+	bot.send_message(cid, resultado2)
 
 def command_newgame(bot, update):  
 	cid = update.message.chat_id
