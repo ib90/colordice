@@ -74,9 +74,9 @@ def command_roll(bot, update, args):
 	resultado1=''
 	resultado2=''
 	for j in range(int(args[0])):
-		resultado1 = resultado1 + str(random.choice(die1))
+		resultado1 = resultado1 + ' ' + str(random.choice(die1))
 	for j in range(int(args[1])):
-		resultado2 = resultado2 + random.choice(die2)
+		resultado2 = resultado2 + ' ' + random.choice(die2)
 	bot.send_message(cid, resultado1)
 	bot.send_message(cid, resultado2)
 		      
