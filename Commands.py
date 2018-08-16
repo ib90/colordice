@@ -6,7 +6,7 @@ import jsonpickle
 import os
 import psycopg2
 import urllib.parse
-
+import random
 	
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode
 
@@ -153,6 +153,7 @@ def command_roll(bot, update, args):
 		fname = update.message.from_user.first_name.replace("_", " ")
 		uid = update.message.from_user.id
 		bot.send_message(cid, "Probando")
+		random.choice([1:6])
 		# random.choice(list(self.fate_options.keys()))
 	else:
 		uid = update.message.from_user.id
