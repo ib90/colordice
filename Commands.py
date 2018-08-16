@@ -152,7 +152,8 @@ def command_roll(bot, update, args):
 		# if not args, use normal behaviour
 		fname = update.message.from_user.first_name.replace("_", " ")
 		uid = update.message.from_user.id
-		random.choice(list(self.fate_options.keys()))
+		bot.send_message(cid, "Probando")
+		# random.choice(list(self.fate_options.keys()))
 	else:
 		uid = update.message.from_user.id
 		if uid == ADMIN:
