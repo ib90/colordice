@@ -88,9 +88,11 @@ def command_insultos(bot, update):
 	uid = update.message.from_user.id
 	if uid in [ADMIN,286729354,288105060,206119465,215124218,286729354,274802051,254708289]:
 		die1 = ['Judío ','Ario ','Flaco ','Eternestor ','Narigón ','Agustintito ','Juan Carlos Pasqual ']
-		die2 = ['tirapiedras','tereso','soplanucas','gato', 'puto', 'amigo de la federal', 'botón', 'garca', 'cagón', 'cara de verga','campeón de succión peneana']		
-		resultado1=random.choice(die1)
-		resultado2=random.choice(die2)
+		die2 = ['tirapiedras ','tereso ','soplanucas ','gato ', 'puto ', 'amigo de la federal ', 'botón ', 'garca ', 'cagón ', 'cara de verga ','campeón de succión peneana ']		
+		resultado1 = random.choice(die1)
+		resultado2 = ''
+		for j in range(random([1,2,3,4])
+			resultado2 = resultado2 + random.choice(die2)
 		resultado = resultado1 + resultado2
 		bot.send_message(cid, resultado)
 	else:
