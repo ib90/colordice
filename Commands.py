@@ -106,9 +106,9 @@ def command_insultos(bot, update):
 	if uid == 288105060:
 		bot.send_message(cid, 'Qué linda que sos, Emi')
 	if uid == 206119465:
-		bot.send_message(cid, 'Soy el flaco, o no, no sé, ponele')
+		bot.send_message(cid, 'Que crack el flaco! o no... no sé, ponele')
 	if uid == 254708289:
-		bot.send_message(cid, 'Estaba esperando tu mensaje, Agustintito')	
+		bot.send_message(cid, 'Agustintito, Agustintito, Agustintito!')	
 	if uid == 215124218:
 		bot.send_message(cid, 'Hail mein führer!')
 	if uid == 286729354:
