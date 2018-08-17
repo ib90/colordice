@@ -947,7 +947,7 @@ def main():
 	
 	############## Dice Roller commands ################################################
 	dp.add_handler(CommandHandler("roll", Commands.command_roll, pass_args = True))
-	#dp.add_handler(CommandHandler("roll", Commands.command_roll))
+	dp.add_handler(CommandHandler("insultos", Commands.command_insultos))
 	
 	#Testing commands
 	dp.add_handler(CommandHandler("ja", Commands.command_ja))
