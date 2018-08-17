@@ -110,7 +110,7 @@ def command_insultos(bot, update):
 	if uid == 286729354:
 		bot.send_message(cid, 'Qué buen judío eres tú, Heffito!')
 	if uid == 274802051:
-		bot.send_message(cid, 'Oh, el gran Eternestor!')
+		bot.send_message(cid, 'Oh, el gran Eternestor! Por fin mandaste tu trabajo a Aadeca. Me alegro que te sientas liberado')
 		      
 def command_symbols(bot, update):
     cid = update.message.chat_id
