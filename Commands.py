@@ -103,6 +103,8 @@ def command_insultos(bot, update):
 		else:
 			bot.send_message(cid, "Qué cara de topu, %s!" % fname)
 			bot.send_message(ADMIN, "UID: %d, Nombre: %s" % (uid,fname))
+	if uid == 275419833:
+		bot.send_message(cid, 'No sabía que Cacho usara telegram!')
 	if uid == 288105060:
 		bot.send_message(cid, 'Qué linda que sos, Emi')
 	if uid == 206119465:
