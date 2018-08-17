@@ -94,8 +94,9 @@ def command_insultos(bot, update):
 		resultado = resultado1 + resultado2
 		bot.send_message(cid, resultado)
 	else:
-		bot.send_message(cid, 'Puto el que lee')
-		
+		fname = update.message.from_user.first_name.replace("_", " ")
+		uid = update.message.from_user.id
+		bot.send_message(cid, "Qué cara de topu, %s!" % fname)		
 		      
 def command_symbols(bot, update):
     cid = update.message.chat_id
