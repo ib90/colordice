@@ -52,7 +52,8 @@ commands = [  # command description used in the "help" command
     '/history - Imprime el historial del juego actual',
     '/votes - Imprime quien ha votado',
     '/calltovote - Avisa a los jugadores que se tiene que votar',
-    '/roll - Tirar dado'		
+    '/roll - Tirar dado'
+    #'/insultos - No hace falta aclaración'		
 ]
 
 symbols = [
@@ -81,6 +82,20 @@ def command_roll(bot, update, args):
 		resultado2 = resultado2 + ' ' + random.choice(die2)
 	bot.send_message(cid, resultado1)
 	bot.send_message(cid, resultado2)
+	
+def command_insultos(bot, update):	
+	cid = update.message.chat_id
+	uid = update.message.from_user.id
+	if uid == ADMIN:
+		die1 = ['Judío','Ario','Flaco','Eternestor']
+		die2 = ['gato', 'puto', 'amigo de la federal', 'botón', 'garca', 'cagón', 'cara de verga']		
+		resultado1=random.choice(die1)
+		resultado2=random.choice(die2)
+		resultado = resultado1 + resultado2
+		bot.send_message(cid, resultado)
+	else:
+		bot.send_message(cid, 'Puto el que lee')
+		
 		      
 def command_symbols(bot, update):
     cid = update.message.chat_id
