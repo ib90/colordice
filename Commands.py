@@ -86,7 +86,7 @@ def command_roll(bot, update, args):
 def command_insultos(bot, update):	
 	cid = update.message.chat_id
 	uid = update.message.from_user.id
-	if uid in [ADMIN,286729354,288105060,206119465,215124218,286729354,274802051,254708289]:
+	if uid in [ADMIN,286729354,288105060,206119465,215124218,286729354,274802051,254708289,275419833]:
 		die1 = ['Judío ','Ario ','Flaco ','Eternestor ','Narigón ','Agustintito ','Juan Carlos Pasqual ']
 		die2 = ['tirapiedras ','tereso ','soplanucas ','gato ', 'puto ', 'amigo de la federal ', 'botón ', 'garca ', 'cagón ', 'cara de verga ','campeón de succión peneana ']		
 		resultado1 = random.choice(die1)
