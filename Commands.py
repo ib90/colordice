@@ -99,7 +99,7 @@ def command_insultos(bot, update):
 		if fname in ['Bernabé','Bernabe']:
 			bot.send_message(cid, "Qué capo que sos, %s!" % fname)	
 		bot.send_message(cid, "Qué cara de topu, %s!" % fname)
-		bot.send_message(ADMIN, "UID: %n, Nombre: %s" % (uid,fname))
+		bot.send_message(ADMIN, "UID: %d, Nombre: %s" % (uid,fname))
 		      
 def command_symbols(bot, update):
     cid = update.message.chat_id
