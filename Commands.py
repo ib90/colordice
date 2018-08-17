@@ -87,7 +87,7 @@ def command_insultos(bot, update):
 	cid = update.message.chat_id
 	uid = update.message.from_user.id
 	if uid == ADMIN:
-		die1 = ['Judío','Ario','Flaco','Eternestor']
+		die1 = ['Judío ','Ario ','Flaco ','Eternestor ','Narigón ']
 		die2 = ['gato', 'puto', 'amigo de la federal', 'botón', 'garca', 'cagón', 'cara de verga']		
 		resultado1=random.choice(die1)
 		resultado2=random.choice(die2)
