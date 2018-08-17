@@ -96,7 +96,7 @@ def command_insultos(bot, update):
 	else:
 		fname = update.message.from_user.first_name.replace("_", " ")
 		uid = update.message.from_user.id
-		if fname = 'Bernabé':
+		if fname in ['Bernabé','Bernabe']:
 			bot.send_message(cid, "Qué capo que sos, %s!" % fname)	
 		bot.send_message(cid, "Qué cara de topu, %s!" % fname)
 		bot.send_message(ADMIN, "UID: %n, Nombre: %s" % uid,fname)
