@@ -87,8 +87,8 @@ def command_insultos(bot, update):
 	cid = update.message.chat_id
 	uid = update.message.from_user.id
 	if uid == ADMIN:
-		die1 = ['Judío ','Ario ','Flaco ','Eternestor ','Narigón ']
-		die2 = ['gato', 'puto', 'amigo de la federal', 'botón', 'garca', 'cagón', 'cara de verga']		
+		die1 = ['Judío ','Ario ','Flaco ','Eternestor ','Narigón ','Agustintito ','Juan Carlos Pasqual ']
+		die2 = ['gato', 'puto', 'amigo de la federal', 'botón', 'garca', 'cagón', 'cara de verga','campeón de succión peneana']		
 		resultado1=random.choice(die1)
 		resultado2=random.choice(die2)
 		resultado = resultado1 + resultado2
@@ -96,7 +96,9 @@ def command_insultos(bot, update):
 	else:
 		fname = update.message.from_user.first_name.replace("_", " ")
 		uid = update.message.from_user.id
-		bot.send_message(cid, "Qué cara de topu, %s!" % fname)		
+		if fname = 'Bernabé':
+			bot.send_message(cid, "Qué capo que sos, %s!" % fname)	
+		bot.send_message(cid, "Qué cara de topu, %s!" % fname)	
 		      
 def command_symbols(bot, update):
     cid = update.message.chat_id
