@@ -91,7 +91,7 @@ def command_insultos(bot, update):
 		die2 = ['tirapiedras ','tereso ','soplanucas ','gato ', 'puto ', 'amigo de la federal ', 'botón ', 'garca ', 'cagón ', 'cara de verga ','campeón de succión peneana ']		
 		resultado1 = random.choice(die1)
 		resultado2 = ''
-		for j in range(random([1,2,3,4])):
+		for j in range(random.choice([1,2,3,4])):
 			resultado2 = resultado2 + random.choice(die2)
 		resultado = resultado1 + resultado2
 		bot.send_message(cid, resultado)
