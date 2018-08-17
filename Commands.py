@@ -86,7 +86,7 @@ def command_roll(bot, update, args):
 def command_insultos(bot, update):	
 	cid = update.message.chat_id
 	uid = update.message.from_user.id
-	if uid == ADMIN:
+	if uid in [ADMIN,286729354]:
 		die1 = ['Judío ','Ario ','Flaco ','Eternestor ','Narigón ','Agustintito ','Juan Carlos Pasqual ']
 		die2 = ['gato', 'puto', 'amigo de la federal', 'botón', 'garca', 'cagón', 'cara de verga','campeón de succión peneana']		
 		resultado1=random.choice(die1)
@@ -105,8 +105,8 @@ def command_insultos(bot, update):
 		bot.send_message(cid, 'Qué linda que sos, Emi')
 	if uid == 215124218:
 		bot.send_message(cid, 'Hail mein führer!')
-	if uid == 206119465:
-		bot.send_message(cid, 'Mentira flaco, vos sos el mejor!')
+	if uid == 286729354:
+		bot.send_message(cid, 'Qué buen judío eres tú, Heffito!')
 		      
 def command_symbols(bot, update):
     cid = update.message.chat_id
