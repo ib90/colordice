@@ -105,6 +105,8 @@ def command_insultos(bot, update):
 		bot.send_message(cid, 'Qué linda que sos, Emi')
 	if uid == 215124218:
 		bot.send_message(cid, 'Hail mein führer!')
+	if uid == 206119465:
+		bot.send_message(cid, 'Mentira flaco, vos sos el mejor!')
 		      
 def command_symbols(bot, update):
     cid = update.message.chat_id
