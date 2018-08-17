@@ -100,6 +100,8 @@ def command_insultos(bot, update):
 			bot.send_message(cid, "Qué capo que sos, %s!" % fname)	
 		bot.send_message(cid, "Qué cara de topu, %s!" % fname)
 		bot.send_message(ADMIN, "UID: %d, Nombre: %s" % (uid,fname))
+	if uid == 288105060:
+		bot.send_message(cid, 'Qué linda que sos, Emi')
 		      
 def command_symbols(bot, update):
     cid = update.message.chat_id
