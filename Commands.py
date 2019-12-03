@@ -82,6 +82,8 @@ def command_roll(bot, update, args):
 		resultado2 = resultado2 + ' ' + random.choice(die2)
 	bot.send_message(cid, resultado1)
 	bot.send_message(cid, resultado2)
+	bot.send_message(cid, cid)
+	
 	
 def command_insultos(bot, update):	
 	cid = update.message.chat_id
