@@ -53,7 +53,7 @@ commands = [  # command description used in the "help" command
     '/votes - Imprime quien ha votado',
     '/calltovote - Avisa a los jugadores que se tiene que votar',
     '/roll - Tirar dado',
-    '/chat_id - Obtener el #chat_id'
+    '/chatid - Obtener el #chat_id'
     #'/insultos - No hace falta aclaración'		
 ]
 
@@ -68,7 +68,7 @@ symbols = [
     u"\u2620" + ' Fascistas ganan'  # skull
 ]
 
-def command_chat_id(bot, update, args):
+def command_chatid(bot, update, args):
 	cid = update.message.chat_id
 	bot.send_message(cid, cid)
 	
