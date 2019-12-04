@@ -68,7 +68,7 @@ symbols = [
     u"\u2620" + ' Fascistas ganan'  # skull
 ]
 
-def command_chatid(bot, update, args):
+def command_chatid(bot, update):
 	cid = update.message.chat_id
 	bot.send_message(cid, cid)
 	
